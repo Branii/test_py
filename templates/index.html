@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test Python</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="registration-form">
+        <form>
+            <div class="form-icon">
+                <span><i class="icon icon-layers"></i></span>
+            </div>
+            <div class="form-group">
+                <span>Select Currency [from]</span>
+                <Select id="from" class="form-control item">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="JPY">JPY</option>
+                </select>
+            </div>
+            <center><span><i class="icon icon-energy"></i></span></center>
+            <div class="form-group">
+                <span>Select Currency [to]</span>
+                <Select id="to" class="form-control item">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="JPY">JPY</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <span>Enter Amount</span>
+                <input type="number" class="form-control item" id="amount" placeholder="0.00">
+            </div>
+            <div class="form-group">
+                <button type="button" id="convertButton" class="btn btn-block create-account">Convert</button>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="result" readonly placeholder="Result" value="0.00" style="height: 80px;">
+            </div>
+         
+        </form>
+        <div class="social-media">
+            <h5>Currency Convertor [ Python Example ]</h5>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
