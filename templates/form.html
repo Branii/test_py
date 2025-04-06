@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+<div class="registration-form">
+  <form class="form">
+    <div class="flex-column">
+      <label>Registration Form </label>
+      <hr />
+      <p></p>
+    </div>
+
+    <div class="flex-column">
+      <label>Firstname </label>
+    </div>
+    <div class="inputForm">
+      <input type="text" class="input" placeholder="Eg. kofi" id="firstname" />
+    </div>
+
+    <div class="flex-column">
+      <label>Lastname </label>
+    </div>
+    <div class="inputForm">
+      <input type="text" class="input" placeholder="eg. Mensah" id="lastname" />
+    </div>
+
+    <div class="flex-column">
+      <label>Mobile </label>
+    </div>
+    <div class="inputForm">
+      <input
+        type="phone"
+        class="input"
+        placeholder="024xxxxxx"
+        id="mobile"
+        maxlength="10"
+      />
+    </div>
+
+    <button class="button-submit" id="submitButton">Register</button>
+
+    <div class="card__footer">
+      <a href="{{ url_for('userlist') }}">View users</a>
+    </div>
+  </form>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
